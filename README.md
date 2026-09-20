@@ -30,6 +30,7 @@ O **Quicklist** é um projeto prático desenvolvido como parte dos desafios de *
 
 O objetivo principal da aplicação é aplicar e consolidar conceitos fundamentais de desenvolvimento web *Front-End*, englobando desde a estruturação semântica da página até a manipulação dinâmica do DOM (*Document Object Model*) e tratamento de eventos do usuário.
 
+ Teste aqui: [https://abnerlevy.github.io/desafio-lista-de-compras-js-rocketseat/](https://abnerlevy.github.io/desafio-lista-de-compras-js-rocketseat/)
 ---
 
 ## ✨ Funcionalidades

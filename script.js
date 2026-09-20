@@ -1,7 +1,7 @@
 const itemInput = document.getElementById("itemInput");
 const addButton = document.getElementById("addButton");
 const itemList = document.getElementById("itemList");
-
+const alertMessage = document.getElementById("alertMessage");
 
 addButton.addEventListener('click',(e)=>{
     
@@ -13,31 +13,43 @@ addButton.addEventListener('click',(e)=>{
    }
 
     const newLi = document.createElement("li");
+
     newLi.classList.add("item");
 
     newLi.innerHTML=`<label>
                         <input type="checkbox" class="item-checkbox">
                         <span class="item-name">${itemTyped}</span>
                      </label>
-
                     <button class="remove-button" title="Remover item">
-                      🗑
+                      <img src="./img/lixeira.png" alt="icone de lixeira">
                     </button>`
 
     const checkboxInterna = newLi.querySelector(".item-checkbox");
 
     checkboxInterna.addEventListener('click', () => {
+
         if (checkboxInterna.checked == true) {
             newLi.classList.add("completed"); 
         } else {
             newLi.classList.remove("completed");
         }
+
     });
 
     const btnremove = newLi.querySelector(".remove-button");
     
     btnremove.addEventListener('click', ()=>{
+
         newLi.remove();
+
+        alertMessage.classList.remove("hidden");
+
+        const closeAlert = document.getElementById("closeAlert");
+
+        closeAlert.addEventListener('click', ()=>{
+            alertMessage.classList.add("hidden");
+        });
+        
     });
 
     itemList.appendChild(newLi);

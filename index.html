@@ -3,56 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Quicklist</title>
-
+    <title>Lista de compras</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
     <header class="header">
-        <div class="logo">
-            <span class="logo-icon">☷</span>
-            <span>quicklist</span>
-        </div>
+        <img src="./img/logo.png" alt="LISTA DE COMPRAS" class="logo">
+        <h2>My List</h2>
     </header>
 
     <main class="container">
 
-        <button class="back-button" id="backButton">
+        <button onclick="window.location.href='obrigado.html'" class="back-button" id="backButton">
             ← Voltar
         </button>
 
-        <h1>Compras da semana</h1>
+        <h1>Lista de Compras</h1>
 
         <section class="add-item">
-            <input
-                type="text"
-                id="itemInput"
-                placeholder="Adicione um novo item"
-            >
-
-            <button id="addButton">
-                Adicionar item
-            </button>
+            <input type="text" id="itemInput" placeholder="Adicione um novo item">
+            <button id="addButton">Adicionar item</button>
         </section>
 
         <ul id="itemList">
 
-            <!-- Item 1 -->
             <li class="item">
                 <label>
                     <input type="checkbox" class="item-checkbox">
                     <span class="item-name">Pão de forma</span>
                 </label>
-
                 <button class="remove-button" title="Remover item">
-                    🗑
+                    <img src="./img/lixeira.png" alt="icone de lixeira">
                 </button>
             </li>
 
-            <!-- Item 2 -->
             <li class="item">
                 <label>
                     <input type="checkbox" class="item-checkbox">
@@ -60,46 +46,18 @@
                 </label>
 
                 <button class="remove-button" title="Remover item">
-                    🗑
-                </button>
-            </li>
-
-            <!-- Item 3 -->
-            <li class="item">
-                <label>
-                    <input type="checkbox" class="item-checkbox">
-                    <span class="item-name">Suco de laranja</span>
-                </label>
-
-                <button class="remove-button" title="Remover item">
-                    🗑
-                </button>
-            </li>
-
-            <!-- Item 4 -->
-            <li class="item">
-                <label>
-                    <input type="checkbox" class="item-checkbox">
-                    <span class="item-name">Bolacha</span>
-                </label>
-
-                <button class="remove-button" title="Remover item">
-                    🗑
+                    <img src="./img/lixeira.png" alt="icone de lixeira">
                 </button>
             </li>
 
         </ul>
 
         <!-- Mensagem de alerta -->
-        <div id="alertMessage" class="alert hidden">
-            <span>ⓘ</span>
-
-            <span id="alertText">
-                O item foi removido da lista
-            </span>
-
-            <button id="closeAlert">×</button>
-        </div>
+        <section id="alertMessage" class="alert hidden">
+            <img src="./img/Icon.png" alt="icone de alerta">
+            <span id="alertText">O item foi removido da lista</span>
+            <button id="closeAlert">X</button>
+        </section>
 
     </main>
 
